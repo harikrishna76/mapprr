@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expire_date: 
+  name: 
+  sku_id: 
+  categories: 
+  tags: 
+  images: 
+  price: 
+
+two:
+  expire_date: 
+  name: 
+  sku_id: 
+  categories: 
+  tags: 
+  images: 
+  price: 
