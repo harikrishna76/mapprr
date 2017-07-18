@@ -1,28 +1,7 @@
-== README
+Instructions:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. Clone git repository https://github.com/harikrishna76/mapprr.git 
+2. Setup mongodb, and make sure you are giving exact host link of mongodb(ex:'mongodb://127.0.0.1:27017') in the config/mongodb.yml
+3. Install the bundler
+4. Run the rake task(rake db:seed) to seed the dummy data
+5. Now you can start the server
