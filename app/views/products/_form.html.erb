@@ -12,32 +12,49 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :expire_date %><br>
-    <%= f.text_field :expire_date %>
-  </div>
-  <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :sku_id %><br>
+    <%= f.label :sku_id, "SKU ID" %><br>
     <%= f.text_field :sku_id %>
   </div>
-  <div class="field">
-    <%= f.label :categories %><br>
-    <%= f.text_field :categories, multiple: true %>
+  <div class="field" id="categories">
+    <%= f.label :categories %>
+    <a class="add-more" onclick="addMoreFields('categories')">Add More</a>
+    <% if @edit_mode %>
+      <% @product.categories.each do |value| %>
+        <%= f.text_field :categories, value: value, multiple: true %>
+      <% end %>
+    <% else %>
+      <%= f.text_field :categories, multiple: true %>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :tags %><br>
-    <%= f.text_field :tags, multiple: true%>
+  <div class="field" id="tags">
+    <%= f.label :tags %>
+    <a class="add-more" onclick="addMoreFields('tags')">Add More</a>
+    <% if @edit_mode %>
+      <% @product.tags.each do |value| %>
+        <%= f.text_field :tags, value: value, multiple: true %>
+      <% end %>
+    <% else %>
+      <%= f.text_field :tags, multiple: true %>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :images %><br>
-    <%= f.text_field :images, multiple: true %>
+  <div class="field" id="images">
+    <% if !@edit_mode %>
+    <%= f.label :images %>
+      <a class="add-more" onclick="addMoreFields('images')">Add More</a>
+      <%= f.text_field :images, name: 'product[images][][img_path]', multiple: true %>
+    <% end %>
   </div>
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :expire_date %><br>
+    <%= f.text_field :expire_date %>
   </div>
   <div class="actions">
     <%= f.submit %>

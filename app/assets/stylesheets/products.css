@@ -2,3 +2,16 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+.container {
+  margin-bottom: 30px
+}
+.field input{
+  margin-top: 5px;display: block
+}
+.field .add-more{
+  cursor: pointer;
+}
+
+a:visited {
+  color: #337ab7 !important;
+}

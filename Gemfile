@@ -6,8 +6,14 @@ gem 'rails', '4.2.4'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+#gem for mongodb
 gem 'mongoid'
+#gem for json builder
 gem 'jbuilder', '~> 2.0'
+#gem for Twitter Bootstrap
+gem 'bootstrap-sass', '~> 3.3.6'
+#gem for sass  - css precompiler
+gem 'sass-rails', '>= 3.2'
 
 
 group :development, :test do

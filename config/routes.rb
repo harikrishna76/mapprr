@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :products
+  
+  get '/admin/products', to:'products#index'
 
 end

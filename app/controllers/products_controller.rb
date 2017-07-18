@@ -17,10 +17,12 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    @edit_mode = true
   end
 
   # POST /products
   def create
+
     @product = Product.new(product_params)
 
     if @product.save
@@ -53,6 +55,6 @@ class ProductsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def product_params
-      params.require(:product).permit(:expire_date, :name, :sku_id, :categories, :tags, :images, :price)
+      params.require(:product).permit(:expire_date, :name, :sku_id, :price, :categories => [], :tags => [], :images => [:img_path])
     end
 end
